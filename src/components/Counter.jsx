@@ -1,5 +1,5 @@
-function Counter({ onClickFunc, btnName }) {
-  return <button onClick={onClickFunc}>{btnName}</button>;
+function Counter() {
+  return;
 }
 
 export default Counter;
