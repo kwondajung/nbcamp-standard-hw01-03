@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Content from './components/Content';
+import Counter from './components/Counter';
+import Status from './components/Status';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,18 +18,13 @@ function App() {
   return (
     <div>
       <Header title={title} />
-      <p>Welcome to my website!</p>
+      <Content />
 
-      <div>
-        <p>Count: {count}</p>
-        <button onClick={increment}>Increment</button>
-      </div>
+      <Counter count={count} onClickFunc={increment} btnName="increment" />
 
-      <div>
-        <p>{count > 10 ? 'High count!' : 'Keep counting...'}</p>
-      </div>
+      <Status count={count} />
 
-      <Footer />
+      <Footer year={year} />
     </div>
   );
 }

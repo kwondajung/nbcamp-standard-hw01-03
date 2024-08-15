@@ -1,5 +1,5 @@
 function Content() {
-  return;
+  return <p>Welcome to my website!</p>;
 }
 
 export default Content;
